@@ -57,7 +57,7 @@ print();
 
 def slice_foods():
     # your code here
-    slice_foods = ['burgers', 'pizza', 'butterchicken']
+    slice_foods = ('burgers', 'pizza', 'butterchicken')
     last_two_foods = slice_foods[-2:]
     return last_two_foods
 
@@ -91,11 +91,18 @@ print();
 # Use a for loop to iterate over the key: value pairs in the home_town dictionary and append a string with the following format to home_town_items: "<key> = <value>"
 
 def list_home_town_items():
+    
     # your code here'
-    home_town_items = []
-    for items in home_town.items():
-        home_town_items.append(f"{items[0]} = {items[1]}")
-    return home_town_items
+    home_town_items = {
+        'city': 'AzemGarden',
+        'state': 'Lahore',
+        'population': '15 million'
+    }
+    home_town_list = []
+
+    for key, items in home_town_items.items():
+        home_town_list .append(f'{key} = {items}')
+    return home_town_list
 
 
 
